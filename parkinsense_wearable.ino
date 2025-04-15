@@ -52,8 +52,8 @@ void send_accel_data(LSM6DS3 &devIMU, BLECharacteristic &accel_X_char,BLECharact
   uint8_t buffer_z[sizeof(float)];
 
   memcpy(buffer_x, &accel_x,sizeof(float));
-  memcpy(buffer_y, &accel_x,sizeof(float));
-  memcpy(buffer_z, &accel_x,sizeof(float));
+  memcpy(buffer_y, &accel_y,sizeof(float));
+  memcpy(buffer_z, &accel_z,sizeof(float));
 
 
   accel_X_char.notify(buffer_x,sizeof(float));
