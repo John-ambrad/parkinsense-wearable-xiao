@@ -39,7 +39,7 @@ void ble_start_adv(BLEService &myService){
 
 void ble_setup_char(BLECharacteristic &myChar){
   myChar.setProperties(CHR_PROPS_NOTIFY);
-  myChar.setPermission(SECMODE_OPEN, SECMODE_NO_ACCESS);
+  myChar.setPermission(SECMODE_ENC_WITH_MITM, SECMODE_NO_ACCESS);
   myChar.setFixedLen(sizeof(float));
   myChar.begin();
 
